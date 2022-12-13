@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class BookPage extends BasePage {
+public class BookPage1 extends BasePage {
 
     @FindBy(xpath = "//table/tbody/tr")
     public List<WebElement> allRows;
@@ -17,6 +17,13 @@ public class BookPage extends BasePage {
 
     @FindBy(id = "book_categories")
     public WebElement mainCategoryElement;
+
+    @FindBy(xpath = "//span[@class='title'][.='Books']")
+    public WebElement books;
+
+    @FindBy(xpath = "//*[@id=\"tbl_books\"]/tbody/tr/td[1]/a")
+    public WebElement editBook;
+
 
     @FindBy(name = "name")
     public WebElement bookName;
@@ -35,6 +42,9 @@ public class BookPage extends BasePage {
     @FindBy(id = "description")
     public WebElement description;
 
+    public void clickBooks(){
+        books.click();
+    }
 
 
     public WebElement editBook(String book) {
@@ -43,6 +53,8 @@ public class BookPage extends BasePage {
     }
 
 
-
+    public void clickEdit(){
+        editBook.click();
+    }
 
 }
