@@ -1,6 +1,7 @@
 package com.cydeo.library.steps;
 
-import com.cydeo.library.pages.BookPage;
+
+import com.cydeo.library.pages.BookPage1;
 import com.cydeo.library.pages.BorrowingBooksPage;
 import com.cydeo.library.utility.BrowserUtil;
 import com.cydeo.library.utility.DB_Util;
@@ -14,7 +15,7 @@ import org.openqa.selenium.Keys;
 import java.util.Map;
 
 public class Student_BorrowBookStepDefs {
-    BookPage bookPage = new BookPage();
+    BookPage1 bookPage = new BookPage1();
     BorrowingBooksPage borrowingBooksPage = new BorrowingBooksPage();
      String bookName;
      String borrowedDate;
