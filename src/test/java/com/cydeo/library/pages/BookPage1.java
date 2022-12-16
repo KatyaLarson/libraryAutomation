@@ -42,9 +42,20 @@ public class BookPage1 extends BasePage {
     @FindBy(id = "description")
     public WebElement description;
 
+
+    @FindBy(xpath = "//select[@name='tbl_books_length']")
+    public WebElement NumberOfBooksDropdown;
+
+    @FindBy(xpath = "(//td/a[not (contains(@class,'disabled'))])[1]") // added new locator for borrow button
+    public WebElement borrowBookBtn;
+
+    @FindBy(className = "toast-message")
+    public WebElement toastMsg; //added new locator for toast message
+
     public void clickBooks(){
         books.click();
     }
+
 
 
     public WebElement editBook(String book) {
